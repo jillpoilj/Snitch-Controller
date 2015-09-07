@@ -62,6 +62,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // listBox1
             // 
@@ -78,6 +79,7 @@
             // 
             this.serialPort1.PortName = "COM6";
             this.serialPort1.ReadTimeout = 1000;
+            this.serialPort1.WriteTimeout = 1;
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // comboBox1
@@ -116,7 +118,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 2000;
+            this.timer1.Interval = 1100;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
